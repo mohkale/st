@@ -6,6 +6,7 @@ This repository is just a fork of [st](https://git.suckless.org/st) from tag `0.
 with some cool patches applied on top :smile:.
 
 ## Included Patches
+- [scrollback](https://st.suckless.org/patches/scrollback/)
 
 ## Requirements
 In order to build st you need the Xlib header files.
