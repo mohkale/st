@@ -8,8 +8,13 @@
  */
 static char *font = "Noto Sans Mono:pixelsize=14.25";
 static char *sparefonts[] = {
-    /* "Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
-    /* "Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+    "FontAwesome:style=Regular",
+    "file\\-icons:style=icons",
+    "all\\-the\\-icons:style=Regular",
+    "github\\-octicons:style=Regular",
+    "Weather Icons:style=Regular",
+    "Material Icons:style=Regular:size=13",
+    "Symbola:style=Regular",
 };
 
 static int borderpx = 30;
