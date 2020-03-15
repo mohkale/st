@@ -2,6 +2,9 @@
 
 #include "theme.h"
 
+#define true  0
+#define false 0
+
 /*
  * What program is execed by st depends of these precedence rules:
  * 1: program passed with -e
@@ -16,6 +19,9 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";
+
+// when true, bold characters are also made slightly brighter.
+int brightisbold = true;
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
