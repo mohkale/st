@@ -7,6 +7,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Noto Sans Mono:pixelsize=14.25";
+static char *sparefonts[] = {
+    /* "Inconsolata for Powerline:pixelsize=12:antialias=true:autohint=true", */
+    /* "Hack Nerd Font Mono:pixelsize=11:antialias=true:autohint=true", */
+};
+
 static int borderpx = 30;
 
 /* an-old-hope colors (first 16 used by escape sequences) */
