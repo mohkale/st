@@ -137,6 +137,7 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
 	{ TERMMOD,              XK_U,           kscrollup,      {.i = +5} },
 	{ TERMMOD,              XK_D,           kscrolldown,    {.i = +5} },
+    { TERMMOD,              XK_Return,      newterm,        {.i =  0} },
 };
 
 /*
