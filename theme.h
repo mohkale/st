@@ -57,6 +57,18 @@ unsigned int defaultbg = 257;
 static unsigned int defaultcs = 258;
 static unsigned int defaultrcs = 258;
 
+unsigned int selectionbg = 256;
+unsigned int selectionfg = 256;
+
+/*
+ * configure style on selection, set to:
+ *   - 0 to disable any selection modification
+ *   - 1 to reverse the foreground and background
+ *   - 2 apply selectionbg, but not selectionfg
+ *   - x apply both selectionfg and selectionbg
+ */
+static int selectionstyle = 1;
+
 /*
  * Default shape of cursor
  * 2: Block ("█")
