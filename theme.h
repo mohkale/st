@@ -85,4 +85,7 @@ static unsigned int mouseshape = XC_xterm;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
+/* bg opacity */
+float alpha = 0.8;
+
 #endif
