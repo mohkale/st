@@ -6,8 +6,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Noto Sans Mono:pixelsize=14.25";
+static char *font = "Noto Sans Mono:pixelsize=13";
 static char *sparefonts[] = {
+    "PowerlineSymbols:style=Regular",
     "FontAwesome:style=Regular",
     "file\\-icons:style=icons",
     "all\\-the\\-icons:style=Regular",
@@ -15,9 +16,10 @@ static char *sparefonts[] = {
     "Weather Icons:style=Regular",
     "Material Icons:style=Regular:size=13",
     "Symbola:style=Regular",
+    "Unifont:style=Medium:size=13"
 };
 
-static int borderpx = 30;
+static int borderpx = 15;
 
 /* an-old-hope colors (first 16 used by escape sequences) */
 static const char *colorname[] = {
