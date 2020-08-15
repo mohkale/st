@@ -23,28 +23,28 @@ static int borderpx = 15;
 
 /* an-old-hope colors (first 16 used by escape sequences) */
 static const char *colorname[] = {
-	"black",   /* black */
-	"#EB3D54", /* red */
-	"#78BD65", /* green */
-	"#EF7C2A", /* orange */
-	"#4FB4D8", /* blue */
-	"#BA78AB", /* magenta */
-	"#67E4C5", /* cyan */
-	"#45474F", /* grey */
+	"#3b3d45", /* black */
+	"#eb3d54", /* red */
+	"#78bd65", /* green */
+	"#e5cd52", /* yellow */
+	"#4fb4d8", /* blue */
+	"#c46eb1", /* magenta */
+	"#85e0c9", /* cyan */
+	"white",   /* white */
 
-	"#848794", /* bright grey */
-	"#f43434", /* bright red */
-	"#5bc85b", /* bright green */
-	"#EF7C2A", /* bright orange */
-	"#5689f0", /* bright blue */
-	"#c270b0", /* bright magenta */
-	"#19e6b3", /* bright cyan */
+	"#525560", /* bright grey */
+	"#f1223e", /* bright red */
+	"#6cc653", /* bright green */
+	"#edcd2c", /* bright yellow */
+	"#21acde", /* bright blue */
+	"#ce64b7", /* bright magenta */
+	"#63e9c7", /* bright cyan */
 	"white",   /* bright white */
 
 	/* more colors can be added after 255 to use with DefaultXX */
-	[256] = "#CBCDD2", // foreground
-	[257] = "#1C1D21", // background
-    [258] = "#4FB4D8", // cursor
+	[256] = "#cbcdd2", // foreground
+	[257] = "#18181b", // background
+	[258] = "#4fb4d8", // cursor
 
 	"#cccccc",
 	"#555555",
