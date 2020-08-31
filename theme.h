@@ -89,6 +89,6 @@ static unsigned int mousebg = 0;
 
 /* bg opacity */
 float alpha = 1;
-float alpha_unfocused = 0.90;
+float alpha_unfocused = 0.96;
 
 #endif
