@@ -7,6 +7,20 @@ with some cool patches applied on top :smile:.
 
 ## Included Patches
 - [scrollback](https://st.suckless.org/patches/scrollback/)
+- [scrollback-mouse](https://st.suckless.org/patches/scrollback/)
+- scrollback-clamp
+- ~~[anysize](https://st.suckless.org/patches/anysize/)~~
+- [alpha-focus-highlight](https://st.suckless.org/patches/alpha_focus_highlight/)
+- [alpha](https://st.suckless.org/patches/alpha/)
+- [fix-keyboard-input](https://st.suckless.org/patches/fix_keyboard_input/)
+- [vertcenter](https://st.suckless.org/patches/vertcenter/)
+- ~~[newterm](https://st.suckless.org/patches/newterm/)~~
+- [clipboard](https://st.suckless.org/patches/clipboard/)
+- [right-click-paste](https://st.suckless.org/patches/rightclickpaste/)
+- [selection-colors](https://st.suckless.org/patches/selectioncolors/)
+- [desktop-entry](https://st.suckless.org/patches/desktopentry/)
+- [font2](https://st.suckless.org/patches/font2/)
+- [bold-is-not-bright](https://st.suckless.org/patches/bold-is-not-bright/)
 
 ## Requirements
 In order to build st you need the Xlib header files.
