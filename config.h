@@ -136,6 +136,24 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
 
+// open command history inside your configured EDITOR
+static char *cmd_edithistory[] = { "/bin/sh", "-c",
+    "tmpfile=$(mktemp /tmp/st-edit.XXXXXX); \n\
+     trap 'rm \"$tmpfile\"' 0 1 15; \n\
+     cat > \"$tmpfile\" \n\
+     spawn-term -c 80 -r 24 \"${VISUAL:-$EDITOR:-vi}\" \"$tmpfile\" \n\
+    ",
+	"externalpipe", NULL };
+
+// open command history inside your system PAGER
+static char *cmd_pagehistory[] = { "/bin/sh", "-c",
+    "tmpfile=$(mktemp /tmp/st-edit.XXXXXX); \n\
+     trap 'rm \"$tmpfile\"' 0 1 15; \n\
+     cat > \"$tmpfile\" \n\
+     spawn-term -c 80 -r 24 \"${PAGER:-more}\" \"$tmpfile\" \n\
+    ",
+	"externalpipe", NULL };
+
 static Shortcut shortcuts[] = {
 	/* mask                 keysym          function        argument */
 	{ XK_ANY_MOD,           XK_Break,       sendbreak,      {.i =  0} },
@@ -143,7 +161,10 @@ static Shortcut shortcuts[] = {
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
 	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
+	{ TERMMOD,              XK_plus,        zoom,           {.f = +1} },
 	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
+	{ TERMMOD,              XK_minus,       zoom,           {.f = -1} },
+	{ TERMMOD,              XK_underscore,  zoom,           {.f = -1} },
 	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
@@ -153,6 +174,8 @@ static Shortcut shortcuts[] = {
     { TERMMOD,              XK_U,           kscrollup,      {.i = +5} },
     { TERMMOD,              XK_D,           kscrolldown,    {.i = +5} },
     { TERMMOD,              XK_I,           invert,         { }       },
+    { TERMMOD,              XK_E,           externalpipe,   {.v = cmd_edithistory} },
+    { TERMMOD,              XK_P,           externalpipe,   {.v = cmd_pagehistory} },
 };
 
 /*
