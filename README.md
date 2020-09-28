@@ -5,6 +5,8 @@ st is a simple terminal emulator for X which sucks less.
 This repository is just a fork of [st](https://git.suckless.org/st) from tag `0.8.2`,
 with some cool patches applied on top :smile:.
 
+<img src="./screenshot.png" alt="screenshot" />
+
 ## Included Patches
 - [scrollback](https://st.suckless.org/patches/scrollback/)
 - [scrollback-mouse](https://st.suckless.org/patches/scrollback/)
@@ -48,6 +50,22 @@ tic -sx st.info
 ```
 
 See the man page for additional details.
+
+## Theme
+The theme shown above is a fork of [an-old-hope][aoh] tailored specifically for
+use in st. You can find the color codes in [theme](./theme.h).
+
+[aoh]: https://github.com/mohkale/an-old-hope-theme
+
+## Fonts
+The default font is:
+- [noto-sans-mono](https://www.google.com/get/noto/)
+
+And this build will automatically pick up and use the following fonts (in order):
+- [Devicons](https://devicon.dev/)
+- [All The Icons](https://github.com/domtronn/all-the-icons.el/tree/6917b08f64dd8487e23769433d6cb9ba11f4152f/fonts) (batch)
+- [Symbola](https://fontlibrary.org/en/font/symbola)
+- [Unifont](https://unifoundry.com/unifont/)
 
 ## Credits
 Based on Aurélien APTEL &lt;aurelien dot aptel at gmail dot com&gt; bt source code.

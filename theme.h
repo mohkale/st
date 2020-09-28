@@ -8,7 +8,6 @@
  */
 static char *font = "Noto Sans Mono:pixelsize=13";
 static char *sparefonts[] = {
-    "PowerlineSymbols:style=Regular",
     "devicons:style=Regular",
     "FontAwesome:style=Regular",
     "file\\-icons:style=icons",
