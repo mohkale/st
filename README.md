@@ -22,6 +22,7 @@ with some cool patches applied on top :smile:.
 - [font2](https://st.suckless.org/patches/font2/)
 - [bold-is-not-bright](https://st.suckless.org/patches/bold-is-not-bright/)
 - [invert](https://st.suckless.org/patches/invert/)
+- [external-pipe](https://st.suckless.org/patches/externalpipe/)
 
 ## Requirements
 In order to build st you need the Xlib header files.
