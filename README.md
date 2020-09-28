@@ -23,6 +23,7 @@ with some cool patches applied on top :smile:.
 - [bold-is-not-bright](https://st.suckless.org/patches/bold-is-not-bright/)
 - [invert](https://st.suckless.org/patches/invert/)
 - [external-pipe](https://st.suckless.org/patches/externalpipe/)
+- [external-pipe-eternal](https://st.suckless.org/patches/externalpipe/)
 
 ## Requirements
 In order to build st you need the Xlib header files.
