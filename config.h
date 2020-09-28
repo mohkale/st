@@ -11,8 +11,14 @@
  * 5: value of shell in config.h
  */
 static char *shell = "/bin/sh";
+
 char *utmp = NULL;
 char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
+
+/* scroll program: to enable use a string like "scroll"
+ * See [[https://git.suckless.org/st/commit/21e0d6e8b8d20903494386e7e6f43201b3761154.html][here]].
+ */
+char *scroll = NULL;
 
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";
@@ -37,6 +43,19 @@ static unsigned int tripleclicktimeout = 600;
 
 /* alt screens */
 int allowaltscreen = 1;
+
+/* allow certain non-interactive (insecure) window operations such as:
+   setting the clipboard text */
+int allowwindowops = 0;
+
+/*
+ * draw latency range in ms - from new content/keypress/etc until drawing.
+ * within this range, st draws when content stops arriving (idle). mostly it's
+ * near minlatency, but it waits longer for slow updates to avoid partial draw.
+ * low minlatency will tear/flicker more, as it can "detect" idle too early.
+ */
+static double minlatency = 8;
+static double maxlatency = 33;
 
 /* frames per second st should at maximum draw to the screen */
 static unsigned int xfps = 120;
@@ -82,7 +101,6 @@ unsigned int tabspaces = 4;
 /*
  * Default columns and rows numbers
  */
-
 static unsigned int cols = 80;
 static unsigned int rows = 24;
 
@@ -104,12 +122,14 @@ static uint forcemousemod = ShiftMask;
  * Beware that overloading Button1 will disable the selection.
  */
 static MouseShortcut mshortcuts[] = {
-    /* mask                 button   function        argument       release    altscreen */
-    { XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},      0,         -1 },
-    { XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},      0,         -1 },
-	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},      1 },
-	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
-	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"} },
+	/* mask                 button   function        argument             release  altscreen */
+    { XK_ANY_MOD,           Button4, kscrollup,      {.i = 1},            0,       -1 },
+    { XK_ANY_MOD,           Button5, kscrolldown,    {.i = 1},            0,       -1 },
+	{ XK_ANY_MOD,           Button2, selpaste,       {.i = 0},            1           },
+	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"}               },
+	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"}                    },
+	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"}               },
+	{ XK_ANY_MOD,           Button5, ttysend,        {.s = "\005"}                    },
 };
 
 /* Internal keyboard shortcuts. */
