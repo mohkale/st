@@ -11,7 +11,7 @@ with some cool patches applied on top :smile:.
 - [scrollback](https://st.suckless.org/patches/scrollback/)
 - [scrollback-mouse](https://st.suckless.org/patches/scrollback/)
 - scrollback-clamp
-- ~~[anysize](https://st.suckless.org/patches/anysize/)~~
+- [anysize](https://st.suckless.org/patches/anysize/)
 - [alpha-focus-highlight](https://st.suckless.org/patches/alpha_focus_highlight/)
 - [alpha](https://st.suckless.org/patches/alpha/)
 - [fix-keyboard-input](https://st.suckless.org/patches/fix_keyboard_input/)
