@@ -8,13 +8,18 @@
  */
 static char *font = "Noto Sans Mono:pixelsize=13";
 static char *sparefonts[] = {
+    // Decent icons with comprehensive coverage.
+    "Symbols Nerd Font:size=12",
     "devicons:style=Regular",
+    // Font families from emacs [[https://github.com/domtronn/all-the-icons.el][all-the-icons]].
     "FontAwesome:style=Regular",
     "file\\-icons:style=icons",
     "all\\-the\\-icons:style=Regular",
     "github\\-octicons:style=Regular",
     "Weather Icons:style=Regular",
     "Material Icons:style=Regular:size=13",
+    // Fonts that cover everything in existence.
+    // God help you if you end up needing these.
     "Symbola:style=Regular",
     "Unifont:style=Medium:size=13",
 };

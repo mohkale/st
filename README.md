@@ -63,6 +63,7 @@ The default font is:
 - [noto-sans-mono](https://www.google.com/get/noto/)
 
 And this build will automatically pick up and use the following fonts (in order):
+- [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)
 - [Devicons](https://devicon.dev/)
 - [All The Icons](https://github.com/domtronn/all-the-icons.el/tree/6917b08f64dd8487e23769433d6cb9ba11f4152f/fonts) (batch)
 - [Symbola](https://fontlibrary.org/en/font/symbola)
