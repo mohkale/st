@@ -16,7 +16,7 @@ static char *sparefonts[] = {
     "Weather Icons:style=Regular",
     "Material Icons:style=Regular:size=13",
     "Symbola:style=Regular",
-    "Unifont:style=Medium:size=13"
+    "Unifont:style=Medium:size=13",
 };
 
 static int borderpx = 15;
