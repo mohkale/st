@@ -26,6 +26,7 @@ with some cool patches applied on top :smile:.
 - [invert](https://st.suckless.org/patches/invert/)
 - [external-pipe](https://st.suckless.org/patches/externalpipe/)
 - [external-pipe-eternal](https://st.suckless.org/patches/externalpipe/)
+- [boxdraw](https://st.suckless.org/patches/boxdraw/)
 
 ## Requirements
 In order to build st you need the Xlib header files.
