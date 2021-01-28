@@ -811,18 +811,19 @@ xloadcolor(int i, const char *name, Color *ncolor)
 	return XftColorAllocName(xw.dpy, xw.vis, xw.cmap, name, ncolor);
 }
 
+static inline void
+xsetalpha(Color *color)
+{
+    float const a = focused ? alpha : alpha_unfocused;
+    color->color.alpha = (unsigned short)(0xffff * a);
+    color->pixel &= 0x00FFFFFF;
+    color->pixel |= (unsigned char)(0xff * a) << 24;
+}
+
 void
 xloadalpha(void)
 {
-    /* set alpha value of bg color */
-    if (opt_alpha)
-        alpha = strtof(opt_alpha, NULL);
-
-    float const used_alpha = focused ? alpha : alpha_unfocused;
-
-    dc.col[defaultbg].color.alpha = (unsigned short)(0xffff * used_alpha);
-    dc.col[defaultbg].pixel &= 0x00FFFFFF;
-    dc.col[defaultbg].pixel |= (unsigned char)(0xff * used_alpha) << 24;
+    xsetalpha(&dc.col[defaultbg]);
 }
 
 void
@@ -849,7 +850,7 @@ xloadcols(void)
 		}
 
     xloadalpha();
-	loaded = 1;
+    loaded = 1;
 }
 
 int
@@ -1616,6 +1617,10 @@ xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len, int x, i
         bg = &revbg;
     }
 
+#ifdef ALPHA_ALL
+    xsetalpha(bg);
+#endif
+
     if (dmode & DRAW_BG) {
 		/* Intelligent cleaning up of the borders. */
 		if (x == 0) {
@@ -2199,6 +2204,10 @@ main(int argc, char *argv[])
 		break;
     case 'A':
         opt_alpha = EARGF(usage());
+        /* set alpha value of bg color */
+        if (opt_alpha)
+            alpha = strtof(opt_alpha, NULL);
+
         break;
 	case 'c':
 		opt_class = EARGF(usage());

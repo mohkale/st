@@ -92,6 +92,12 @@ static unsigned int mouseshape = XC_xterm;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
 
+/*
+ * When defined the alpha level set by alpha/alpha_unfocused applies
+ * to all cells, not just the default background cell.
+ */
+#define ALPHA_ALL
+
 /* bg opacity */
 float alpha = 1;
 float alpha_unfocused = 0.96;
