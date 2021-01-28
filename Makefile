@@ -57,4 +57,7 @@ uninstall:
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
 	rm -f $(DESKTOP_DIR)/st.desktop
 
-.PHONY: all options clean dist install uninstall
+run: st
+	./st
+
+.PHONY: all options clean dist install uninstall run
