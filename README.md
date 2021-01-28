@@ -60,7 +60,7 @@ use in st. You can find the color codes in [theme](./theme.h).
 
 ## Fonts
 The default font is:
-- [noto-sans-mono](https://www.google.com/get/noto/)
+- [Meslo LG M DZ](https://www.fontmirror.com/meslo-lg-dz)
 
 And this build will automatically pick up and use the following fonts (in order):
 - [Nerd Fonts](https://github.com/ryanoasis/nerd-fonts)

@@ -6,7 +6,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Noto Sans Mono:pixelsize=13";
+static char *font = "Meslo LG M DZ:style=Regular:pixelsize=13";
 static char *sparefonts[] = {
     // Decent icons with comprehensive coverage.
     "Symbols Nerd Font:size=12",
