@@ -6,7 +6,9 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Meslo LG M DZ:style=Regular:pixelsize=13";
+// static char *font = "Meslo LG M DZ:style=Regular:pixelsize=13";
+// static char *font = "MesloLGS Nerd Font:style=Regular:pixelsize=13";
+static char *font = "Fira Code:style=Regular";
 static char *sparefonts[] = {
     // Decent icons with comprehensive coverage.
     "Symbols Nerd Font:size=12",
