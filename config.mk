@@ -9,7 +9,7 @@ VERSION = 0.8.4
 # MANPREFIX = $(PREFIX)/share/man
 
 PREFIX = $(HOME)/.local
-DESKTOP_DIR = $(HOME)/.local/share/applications
+DESKTOP_DIR = $(HOME)/.local/share/applications/
 MANPREFIX = $(HOME)/.local/share/man
 
 X11INC = /usr/X11R6/include

@@ -113,7 +113,7 @@ unsigned int tabspaces = 4;
 /*
  * Default columns and rows numbers
  */
-static unsigned int cols = 80;
+static unsigned int cols = 96;
 static unsigned int rows = 24;
 
 /*
