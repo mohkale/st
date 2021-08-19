@@ -21,7 +21,7 @@ static char *sparefonts[] = {
     // Fonts that cover everything in existence.
     // God help you if you end up needing these.
     "Symbola:style=Regular",
-    "Unifont:style=Medium:size=13",
+    "Unifont:style=Medium:size=13"
 };
 
 static int borderpx = 15;
