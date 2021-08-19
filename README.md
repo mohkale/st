@@ -28,6 +28,7 @@ with some cool patches applied on top :smile:.
 - [external-pipe](https://st.suckless.org/patches/externalpipe/)
 - [external-pipe-eternal](https://st.suckless.org/patches/externalpipe/)
 - [boxdraw](https://st.suckless.org/patches/boxdraw/)
+- [appsync](https://st.suckless.org/patches/sync/)
 
 ## Requirements
 
