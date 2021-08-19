@@ -29,6 +29,7 @@ with some cool patches applied on top :smile:.
 - [external-pipe-eternal](https://st.suckless.org/patches/externalpipe/)
 - [boxdraw](https://st.suckless.org/patches/boxdraw/)
 - [appsync](https://st.suckless.org/patches/sync/)
+- [fix-wide-glyph-truncation](https://github.com/Dreomite/st/commit/e3b821dcb3511d60341dec35ee05a4a0abfef7f2)
 
 ## Requirements
 
