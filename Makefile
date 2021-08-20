@@ -25,7 +25,7 @@ st.o: config.h st.h win.h
 x.o: arg.h config.h st.h win.h
 boxdraw.o: config.h st.h boxdraw_data.h
 
-$(OBJ): config.h config.mk theme.h
+$(OBJ): config.h config.mk
 
 st: $(OBJ)
 	$(CC) -o $@ $(OBJ) $(STLDFLAGS)
