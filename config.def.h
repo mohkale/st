@@ -6,6 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
+static char *sparefonts[] = {};
 static int borderpx = 2;
 
 /*
@@ -24,6 +25,10 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";
+
+/* when true, bold characters are also made slightly brighter. */
+int brightisbold = true;
+
 
 /* Kerning / character bounding-box multipliers */
 static float cwscale = 1.0;
@@ -72,6 +77,18 @@ static unsigned int blinktimeout = 800;
  * thickness of underline and bar cursors
  */
 static unsigned int cursorthickness = 2;
+
+/*
+ * 1: render most of the lines/blocks characters without using the font for
+ *    perfect alignment between cells (U2500 - U259F except dashes/diagonals).
+ *    Bold affects lines thickness if boxdraw_bold is not 0. Italic is ignored.
+ * 0: disable (render all U25XX glyphs normally from the font).
+ */
+const int boxdraw = 1;
+const int boxdraw_bold = 0;
+
+/* braille (U28XX):  1: render as adjacent "pixels",  0: use font */
+const int boxdraw_braille = 0;
 
 /*
  * bell volume. It must be a value between -100 and 100. Use 0 for disabling
@@ -138,6 +155,18 @@ unsigned int defaultbg = 0;
 static unsigned int defaultcs = 256;
 static unsigned int defaultrcs = 257;
 
+unsigned int selectionbg = 256;
+unsigned int selectionfg = 256;
+
+/*
+ * configure style on selection, set to:
+ *   - 0 to disable any selection modification
+ *   - 1 to reverse the foreground and background
+ *   - 2 apply selectionbg, but not selectionfg
+ *   - x apply both selectionfg and selectionbg
+ */
+static int selectionstyle = 1;
+
 /*
  * Default shape of cursor
  * 2: Block ("█")
@@ -159,6 +188,10 @@ static unsigned int rows = 24;
 static unsigned int mouseshape = XC_xterm;
 static unsigned int mousefg = 7;
 static unsigned int mousebg = 0;
+
+/* bg opacity */
+float alpha = 1;
+float alpha_unfocused = 0.96;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which

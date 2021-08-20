@@ -46,7 +46,7 @@ char *scroll = NULL;
 /* identification sequence returned in DA and DECID */
 char *vtiden = "\033[?6c";
 
-// when true, bold characters are also made slightly brighter.
+/* when true, bold characters are also made slightly brighter. */
 int brightisbold = true;
 
 /* Kerning / character bounding-box multipliers */
