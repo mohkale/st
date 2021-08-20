@@ -15,6 +15,7 @@ with some cool patches applied on top :smile:.
 - [anysize](https://st.suckless.org/patches/anysize/)
 - [alpha-focus-highlight](https://st.suckless.org/patches/alpha_focus_highlight/)
 - [alpha](https://st.suckless.org/patches/alpha/)
+- [alpha-all](https://github.com/mohkale/st/commit/dc775e23baeb246367eb2be06fcac5b12b01b523)
 - [fix-keyboard-input](https://st.suckless.org/patches/fix_keyboard_input/)
 - [vertcenter](https://st.suckless.org/patches/vertcenter/)
 - ~~[newterm](https://st.suckless.org/patches/newterm/)~~
