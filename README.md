@@ -5,13 +5,13 @@ st is a simple terminal emulator for X which sucks less.
 This repository is just a fork of [st](https://git.suckless.org/st) from tag `0.8.2`,
 with some cool patches applied on top :smile:.
 
-<img src="./screenshot.png" alt="screenshot" />
+<img src="./.github/screenshot.png" alt="screenshot" />
 
 ## Included Patches
 
 - [scrollback](https://st.suckless.org/patches/scrollback/)
 - [scrollback-mouse](https://st.suckless.org/patches/scrollback/)
-- scrollback-clamp
+- [scrollback-clamp](https://github.com/mohkale/st/commit/8bc34c845d7ed8e646aeaa39a1f9feb561b9072f)
 - [anysize](https://st.suckless.org/patches/anysize/)
 - [alpha-focus-highlight](https://st.suckless.org/patches/alpha_focus_highlight/)
 - [alpha](https://st.suckless.org/patches/alpha/)
