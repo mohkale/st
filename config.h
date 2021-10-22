@@ -12,7 +12,7 @@ static char *sparefonts[] = {
     "devicons:style=Regular",
     // Font families from emacs [[https://github.com/domtronn/all-the-icons.el][all-the-icons]].
     "FontAwesome:style=Regular",
-    "file\\-icons:style=icons",
+    "file\\-icons:style=icons:pixelsize=14",
     "all\\-the\\-icons:style=Regular",
     "github\\-octicons:style=Regular",
     "Weather Icons:style=Regular",
