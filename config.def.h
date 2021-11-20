@@ -53,6 +53,9 @@ int brightisbold = true;
 static float cwscale = 1.0;
 static float chscale = 1.0;
 
+/* Sets the initial zoom of st at startup */
+static float initialzoom = 0.0;
+
 /*
  * word delimiter string
  *

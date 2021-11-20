@@ -1375,6 +1375,12 @@ xinit(int cols, int rows)
 	if (xsel.xtarget == None)
 		xsel.xtarget = XA_STRING;
 
+	if (initialzoom != 0) {
+		Arg zoomarg = { .f = usedfontsize + initialzoom };
+		/* zoomarg.f = usedfontsize + initialzoom; */
+		zoomabs(&zoomarg);
+	}
+
     boxdraw_xinit(xw.dpy, xw.cmap, xw.draw, xw.vis);
 }
 
