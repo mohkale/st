@@ -21,6 +21,9 @@ config.h:
 .c.o:
 	$(CC) $(STCFLAGS) -c $<
 
+compile_flags.txt:
+	printf '%s\n' $(STCFLAGS) > $@
+
 st.o: config.h st.h win.h
 x.o: arg.h config.h st.h win.h
 boxdraw.o: config.h st.h boxdraw_data.h
