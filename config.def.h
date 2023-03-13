@@ -193,13 +193,20 @@ unsigned int selectionfg = 256;
 static int selectionstyle = 1;
 
 /*
- * Default shape of cursor
- * 2: Block ("█")
- * 4: Underline ("_")
- * 6: Bar ("|")
- * 7: Snowman ("☃")
+ * https://invisible-island.net/xterm/ctlseqs/ctlseqs.html#h4-Functions-using-CSI-_-ordered-by-the-final-character-lparen-s-rparen:CSI-Ps-SP-q.1D81
+ * Default style of cursor
+ * 0: Blinking Block
+ * 1: Blinking Block
+ * 2: Steady Block ("█") (Default)
+ * 3: Blinking Underline
+ * 4: Steady Underline ("_")
+ * 5: Blinking Bar
+ * 6: Steady Bar ("|")
+ * 7: Blinking St Cursor
+ * 8: Steady st cursor
  */
-static unsigned int cursorshape = 2;
+static unsigned int cursorstyle = 2;
+static Rune stcursor = 0x2603; // snowman ("☃")
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
