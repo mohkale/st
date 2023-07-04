@@ -8,7 +8,7 @@
 static char *font = "Meslo LG M DZ:style=Regular:pixelsize=13";
 static char *sparefonts[] = {
     // Decent icons with comprehensive coverage.
-    "Symbols Nerd Font:size=12",
+    "Symbols Nerd Font Mono:size=12",
     "devicons:style=Regular",
     // Font families from emacs [[https://github.com/domtronn/all-the-icons.el][all-the-icons]].
     "FontAwesome:style=Regular",
